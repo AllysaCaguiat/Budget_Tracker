@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>My Budget Tracker</h1>
+      <p>Enter your allowance or budget, then add your expenses one by one.</p>
+    </div>
+
+    <div class="summary">
+      <div class="card">
+        <p>Allowance / Budget</p>
+        <h2 id="budgetDisplay">₱0.00</h2>
+      </div>
+
+      <div class="card">
+        <p>Total Expenses</p>
+        <h2 id="expenseDisplay">₱0.00</h2>
+      </div>
+
+      <div class="card">
+        <p>Remaining Money</p>
+        <h2 id="remainingDisplay">₱0.00</h2>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Set Allowance / Budget</h2>
+
+      <div class="row">
+        <input
+          type="number"
+          id="budgetInput"
+          placeholder="Enter your allowance or budget"
+          min="0"
+          step="0.01"
+        >
+        <button id="setBudgetBtn">Set Budget</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Add Expense</h2>
+
+      <div class="expense-form">
+        <input
+          type="text"
+          id="expenseName"
+          placeholder="Expense name (e.g. Grocery, Rent)"
+        >
+
+        <input
+          type="number"
+          id="expenseAmount"
+          placeholder="Amount spent"
+          min="0"
+          step="0.01"
+        >
+
+        <button id="addExpenseBtn">Add Expense</button>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="table-header">
+        <h2>My Expenses</h2>
+        <button id="clearBtn" class="clear-btn">Clear All</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Expense</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="expenseTable">
+            <tr>
+              <td colspan="4" class="empty">No expenses added yet.</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="2"><strong>Total Expenses</strong></td>
+              <td colspan="2"><strong id="tableTotal">₱0.00</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+    <div id="statusMessage" class="status">
+      Set your allowance or budget first, then start adding expenses.
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

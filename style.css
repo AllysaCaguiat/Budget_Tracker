@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+  color: #222;
+  padding: 30px 15px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin-bottom: 8px;
+}
+
+.header p {
+  color: #666;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.card h2 {
+  font-size: 1.7rem;
+}
+
+.panel {
+  background: white;
+  padding: 22px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.panel h2 {
+  margin-bottom: 15px;
+}
+
+.row,
+.expense-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.expense-form {
+  grid-template-columns: 2fr 1fr auto;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  background: #2d6cdf;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: .9;
+}
+
+.clear-btn {
+  background: #d9534f;
+  padding: 9px 14px;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 5px;
+}
+
+th,
+td {
+  padding: 13px;
+  border-bottom: 1px solid #e2e2e2;
+  text-align: left;
+}
+
+th {
+  background: #f8f8f8;
+}
+
+tfoot td {
+  background: #f8f8f8;
+}
+
+.delete-btn {
+  background: #d9534f;
+  padding: 7px 12px;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+}
+
+.status {
+  padding: 16px;
+  border-radius: 10px;
+  background: #eaf1ff;
+  color: #244d91;
+  text-align: center;
+  font-weight: bold;
+}
+
+.status.warning {
+  background: #fff1d8;
+  color: #8a5b00;
+}
+
+.status.danger {
+  background: #ffe5e5;
+  color: #9b1c1c;
+}
+
+@media (max-width: 700px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  .row,
+  .expense-form {
+    grid-template-columns: 1fr;
+  }
+}
